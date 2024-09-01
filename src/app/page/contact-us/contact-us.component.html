@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <!-- Image -->
+            <img src="assets/images/contactus.jpg" class="rounded img-fluid" alt="contact-bg">
+
+            <!-- Contact form START -->
+            <div class="row mt-n5 mt-sm-n7 mt-md-n8">
+                <div class="col-11 col-lg-9 mx-auto">
+                    <div class="card shadow p-4 p-sm-5 p-md-6">
+                        <!-- Card header -->
+                        <div class="card-header border-bottom p-3">
+                           
+                            <!-- Title -->
+                            <h1 class="mb-3 h3">Let's Elevate Your Brand, Together</h1>
+                            <p class="mb-0">Ready to take your brand to the next level? We're here to help! Whether you have questions, need support, or want to discuss how we can collaborate, reach out to us anytime. <a href="#"></a></p>
+                        </div>
+                        <!-- Card body & form -->
+                        
+                        <form #contactForm="ngForm" (ngSubmit)="onSubmit()" class="card-body px-0 pb-0 pt-5"  >
+                            <!-- Name -->
+                            <div class="input-floating-label form-floating mb-4">
+                                <input type="text" class="form-control bg-transparent" placeholder="Your name" [(ngModel)]="full_name"  name="full_name" >
+                                <label for="name">Your name</label>
+                            </div>
+                            <!-- Email -->
+                            <div class="input-floating-label form-floating mb-4">
+                               <input type="email" class="form-control bg-transparent" id="Email" placeholder="name@example.com"  [(ngModel)]="email_address" name="email_address"  required>
+                                <label for="Email">Email address</label>
+                            </div>
+                            <!-- Number -->
+                            <div class="input-floating-label form-floating mb-4">
+                               <input type="text" class="form-control bg-transparent" id="Phonenumber" placeholder="Phone number" [(ngModel)]="phone_number" name="phone_number"   required>
+                                <label for="Phonenumber">Phone number</label>
+                            </div>
+                            <!-- Message -->
+                            <div class="input-floating-label form-floating mb-4">
+                               <input type="text" class="form-control bg-transparent" placeholder="Leave a comment here" id="Message" style="height: 100px" [(ngModel)]="comment" name="comment"   required>
+                                <label for="Message">Message</label>
+                            </div>
+                            <!-- Button -->
+                            <button class="btn btn-lg btn-warning mb-0" type="submit">Send a message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact form END -->
+        </div>
+    </div> <!-- Row END -->
+</div>

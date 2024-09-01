@@ -1,0 +1,46 @@
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div *ngFor="let image of images; let i = index" class="carousel-item" [ngClass]="{'active': i === 0}">
+            <img [src]="image.src" class="d-block w-100" [alt]="image.alt">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>{{ image.title }}</h1>
+                <p class="w-75">{{ image.description }}</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+<div class="container">
+    <div class=" py-5 pb-md-4 mx-auto text-center ">
+        <h1 class="display-6 fw-normal text-body-emphasis">Discover Your Next Must-Have!</h1>
+        <p class="fs-5 text-body-secondary">
+            Shop our curated selection of top-quality products designed to elevate your everyday life.</p>
+    </div>
+    <div class="row my-4">
+        <div *ngFor="let product of displayedProducts; let i = index" class=" col-md-3 col-6 mb-3">
+            <div class="card h-100 justify-content-between  ">
+                <img src={{product.image}} class="card-img-top py-3 " alt="...">
+                <div class="card-body align-items-end d-flex w-100">
+                    <p class="card-text bg-light p-3 w-100 text-center">{{product.title}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row my-4">
+        <div class="text-center my-4">
+            <button *ngIf="!allProductsVisible && products.length > 8" (click)="showAllProducts()"
+                class="btn btn-warning col-6">View All</button>
+        </div>
+    </div>
+</div>

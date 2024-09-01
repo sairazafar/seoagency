@@ -1,0 +1,15 @@
+/* #carouselExampleAutoplaying , #carouselExampleAutoplaying img{
+
+} */
+.carousel-caption{
+    top:25%;
+    text-align: left;
+    left: 30%;
+    color: black;
+}
+.carousel-item:nth-child(2) .carousel-caption{
+  color: white;
+}
+.carousel-item:last-child .carousel-caption{
+    left: 10%;
+}

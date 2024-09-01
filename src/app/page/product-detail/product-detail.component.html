@@ -1,0 +1,17 @@
+<div class="container">
+    <div *ngIf="product" class="py-md-5">
+      <div class="row my-5">
+        <div class="col-md-4">
+          <img [src]="product.image" class="img-fluid " alt="{{product.title}}">
+        </div>
+        <div class="col-md-6 ps-md-5">
+          <h2>{{product.title}}</h2>
+          <p class="mb-5">{{product.description}}</p>
+          <p><strong>Price:</strong> ${{product.price}}</p>
+          <p><strong>Category:</strong> {{product.category}}</p>
+          <p><strong>Rating:</strong> {{product.rating.rate}} ({{product.rating.count}} reviews)</p>
+          <a routerLink="/products"  class="btn btn-warning">Back to Products</a>
+        </div>
+      </div>
+    </div>
+  </div>
