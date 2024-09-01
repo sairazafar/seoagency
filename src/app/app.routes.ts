@@ -7,6 +7,7 @@ import { ProductDetailComponent } from './page/product-detail/product-detail.com
 
 export const routes: Routes = [
     {path:"", redirectTo:"Home", pathMatch:"full"}, // home page
+    {path:"**", redirectTo:"Home", pathMatch:"full"}, // home page if need 404 remove redirectTo:"Home", and commonent:"anycommonentfile" 
     {path:"Home",component:HomeComponent}, // home page
     {path:"About-Us",component:AboutComponent}, // about page
     {path:"Contact-Us",component:ContactUsComponent}, // home page
